@@ -21,13 +21,13 @@ export default class Carrousel extends Component {
 		}, 4000);
 	}
 
-	nextSlide() {
+	next() {
 		let newSlide =
 			this.state.currentSlide === this.props.pictures.length - 1 ? 0 : this.state.currentSlide + 1;
 		this.setState({ currentSlide: newSlide });
 	}
 
-	prevSlide() {
+	prev() {
 		let newSlide =
 			this.state.currentSlide === 0 ? this.props.pictures.length - 1 : this.state.currentSlide - 1;
 		this.setState({ currentSlide: newSlide });
@@ -45,14 +45,14 @@ export default class Carrousel extends Component {
 						<ChevronLeft
 							className="chevron"
 							onClick={() => {
-								this.prevSlide();
+								this.prev();
 							}}
 						/>
 
 						<ChevronRight
 							className="chevron"
 							onClick={() => {
-								this.nextSlide();
+								this.next();
 							}}
 						/>
 					</div>

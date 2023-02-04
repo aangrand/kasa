@@ -12,7 +12,8 @@ import RentalTitle from "../../Components/RentalHeader/RentalTitle/RentalTitle";
 export default class Rental extends Component {
 	render() {
 		const rentalData = data;
-		const rentalUrlId = window.location.pathname.substr(8);
+		const rentalUrlId = window.location.pathname.substring(8);
+		console.log(rentalUrlId)
 		const rental = rentalData.find((item) => item.id === rentalUrlId);
 		if (!rental) return <Error />;
 		return (

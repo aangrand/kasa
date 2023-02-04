@@ -8,7 +8,7 @@ export default class Collapse extends Component {
 		this.state = { isOpenned: false };
 	}
 
-	toggleCollapse() {
+	collapsToggle() {
 		this.setState({
 			isOpenned: !this.state.isOpenned,
 		});
@@ -38,7 +38,7 @@ export default class Collapse extends Component {
 				<div
 					className="collapse__visible"
 					onClick={() => {
-						this.toggleCollapse();
+						this.collapsToggle();
 					}}
 				>
 					<h2 className="collapse__visible__title">{this.props.title}</h2>
